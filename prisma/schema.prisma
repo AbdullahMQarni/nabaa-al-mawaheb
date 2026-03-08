@@ -1,0 +1,77 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+
+model User {
+  id          String    @id @default(uuid())
+  phoneNumber String    @unique
+  name        String?
+  role        String    @default("CLIENT")
+  otp         String?
+  otpExpiry   DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  bookings    Booking[]
+}
+
+model Stadium {
+  id           String    @id @default(uuid())
+  name         String
+  description  String
+  locationUrl  String
+  imageUrl     String
+  pricePerHour Float
+  capacity     Int
+  category     String    @default("FOOTBALL")
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  bookings     Booking[]
+  costs        Cost[]
+}
+
+model Booking {
+  id                 String        @id @default(uuid())
+  userId             String
+  stadiumId          String
+  date               DateTime
+  startTime          String
+  duration           Int
+  sportType          String
+  playersCount       Int
+  totalPrice         Float
+  status             String        @default("PENDING")
+  paymentStatus      String        @default("PENDING")
+  rejectionReason    String?
+  cancellationReason String?
+  createdAt          DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
+
+  user    User    @relation(fields: [userId], references: [id])
+  stadium Stadium @relation(fields: [stadiumId], references: [id])
+}
+
+model Cost {
+  id          String   @id @default(uuid())
+  stadiumId   String?
+  amount      Float
+  category    String
+  description String?
+  date        DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  stadium Stadium? @relation(fields: [stadiumId], references: [id])
+}

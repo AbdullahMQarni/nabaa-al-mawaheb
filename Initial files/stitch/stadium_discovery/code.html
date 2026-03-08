@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nabaa Al-Mawaheb - Stadium Discovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a247f",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121420",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<!-- Header Section -->
+<header class="bg-primary text-white p-4 sticky top-0 z-50 shadow-md">
+<div class="flex items-center justify-between max-w-2xl mx-auto">
+<button class="flex items-center justify-center p-2 rounded-lg hover:bg-white/10">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">Nabaa Al-Mawaheb</h1>
+<button class="flex items-center justify-center p-2 rounded-lg hover:bg-white/10 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 flex h-2 w-2 rounded-full bg-red-500"></span>
+</button>
+</div>
+</header>
+<main class="max-w-2xl mx-auto pb-24">
+<!-- Search Bar -->
+<div class="p-4">
+<div class="relative flex items-center bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/10">
+<span class="material-symbols-outlined absolute left-4 text-slate-400">search</span>
+<input class="w-full py-3 pl-12 pr-4 bg-transparent border-none focus:ring-2 focus:ring-primary rounded-xl text-slate-700 dark:text-slate-200" placeholder="Search stadiums by name or location" type="text"/>
+</div>
+</div>
+<!-- Category Filters -->
+<div class="flex gap-3 px-4 pb-4 overflow-x-auto hide-scrollbar">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-5 text-sm font-medium">
+                All
+            </button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-primary/10 px-5 text-sm font-medium hover:bg-primary/5">
+<span class="material-symbols-outlined text-lg">sports_soccer</span>
+                Football
+            </button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-primary/10 px-5 text-sm font-medium hover:bg-primary/5">
+<span class="material-symbols-outlined text-lg">sports_basketball</span>
+                Basketball
+            </button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-primary/10 px-5 text-sm font-medium hover:bg-primary/5">
+<span class="material-symbols-outlined text-lg">sports_tennis</span>
+                Tennis
+            </button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-primary/10 px-5 text-sm font-medium hover:bg-primary/5">
+<span class="material-symbols-outlined text-lg">sports_volleyball</span>
+                Volleyball
+            </button>
+</div>
+<!-- Recommended Section Header -->
+<div class="px-4 py-2 flex items-center justify-between">
+<h2 class="text-xl font-bold text-slate-900 dark:text-slate-100">Recommended Stadiums</h2>
+<button class="text-primary text-sm font-semibold">View All</button>
+</div>
+<!-- Stadium Cards Container -->
+<div class="px-4 space-y-6 mt-2">
+<!-- Stadium Card 1 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 overflow-hidden group">
+<div class="relative h-56 w-full">
+<img alt="Premium Football Field" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Wide shot of a professional green football stadium at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnqMdkcZCkCJaac9B0fV8X5bdsja7eTkgFmAY2Gcd3UPZtMECrB-p9aO5samnV2MWVBmCaMb_4ail-Q6jX_Bxlc0pqe-Y_alPD3-WZfsuRkFgLZ-wqNBigNTPzN1XpGL4vYHjSu4TkWB93_CKAuXWm9yWMhhBnH6GyF55KOnn_vkO0EK4X4p2BfAnsms1HhQ31ia91n_RDEbZZ1fWEF8WepmmYQd21ZxJlVlGS45gcUGQdnHarqxIJYRMrCgFXObsi675Nx9idDjI"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-full px-3 py-1 text-xs font-bold text-primary flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm">star</span> 4.9
+                    </div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Al-Mawaheb Arena</h3>
+<div class="flex items-center text-slate-500 dark:text-slate-400 text-sm mt-1">
+<span class="material-symbols-outlined text-primary text-base mr-1">location_on</span>
+<span>Riyadh, Saudi Arabia</span>
+</div>
+</div>
+<a class="bg-primary/10 p-2 rounded-lg text-primary hover:bg-primary hover:text-white transition-colors" href="#" title="Open in Maps">
+<span class="material-symbols-outlined" data-location="Riyadh">map</span>
+</a>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-primary font-bold text-lg">$45<span class="text-xs font-normal text-slate-500">/hr</span></span>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary/90 transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Stadium Card 2 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 overflow-hidden group">
+<div class="relative h-56 w-full">
+<img alt="Indoor Basketball Court" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern indoor basketball court with polished wooden floors and bright lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs7OqiVb9DleqvJ4OWrefKJHwrVmcZjUFADWwx3jGkS4uoFpYMnE2ZxYWOM2cYDQEHhXYTel9GYckbmcApi3E2A7PmEplvejggeYVuXj0xCUkz8hO3NFUOT1jVD_9883j4T3cug_XeIRyFlnKqgQaTp9Y3_9xdK_ZNSM6GW7JN_-1zKnucJz_kf1A59dYuUV5s71rxhSJ5silMbHxzoIA6-H5WfZ7NHIZo9jUKWybV_Jf91RXb4lWXvXia8ikFGTQsSsX71q7p3bI"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-full px-3 py-1 text-xs font-bold text-primary flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm">star</span> 4.7
+                    </div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Golden Hoop Indoor Court</h3>
+<div class="flex items-center text-slate-500 dark:text-slate-400 text-sm mt-1">
+<span class="material-symbols-outlined text-primary text-base mr-1">location_on</span>
+<span>Jeddah, Saudi Arabia</span>
+</div>
+</div>
+<a class="bg-primary/10 p-2 rounded-lg text-primary hover:bg-primary hover:text-white transition-colors" href="#" title="Open in Maps">
+<span class="material-symbols-outlined" data-location="Jeddah">map</span>
+</a>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-primary font-bold text-lg">$35<span class="text-xs font-normal text-slate-500">/hr</span></span>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary/90 transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Stadium Card 3 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-primary/5 overflow-hidden group">
+<div class="relative h-56 w-full">
+<img alt="Outdoor Tennis Courts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Two blue outdoor tennis courts next to each other surrounded by greenery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKBebAT3xYijIw1kOg1I7F4SOi6x-r4c6MdId-foUctR8d6Y-pEyepF9XBSMjO9sGUsSqpM-oNmKYLCK9KIeF_c5Vw3dLKvnMrJluFjlBDUyQnlzMF_lw_y0GR7Ado_H4HjZPGr6rMu0blSJx5y6flFT6y7SDnL5Q02nepF-C5io5o2cGVDV1ksxt6QLpvtGG5Nx-ciM2wVEDmrYKRFeubLJIHIAB4YZQEpYVlxoutU_iJMi4j_tMl_RF8Nn3S8IVe-naE-0jWM3E"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-full px-3 py-1 text-xs font-bold text-primary flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm">star</span> 4.8
+                    </div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Royal Tennis Club</h3>
+<div class="flex items-center text-slate-500 dark:text-slate-400 text-sm mt-1">
+<span class="material-symbols-outlined text-primary text-base mr-1">location_on</span>
+<span>Dammam, Saudi Arabia</span>
+</div>
+</div>
+<a class="bg-primary/10 p-2 rounded-lg text-primary hover:bg-primary hover:text-white transition-colors" href="#" title="Open in Maps">
+<span class="material-symbols-outlined" data-location="Dammam">map</span>
+</a>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-primary font-bold text-lg">$25<span class="text-xs font-normal text-slate-500">/hr</span></span>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary/90 transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pb-safe shadow-lg z-50">
+<div class="flex max-w-2xl mx-auto px-6 h-16 items-center">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-[1]">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">My Bookings</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>
