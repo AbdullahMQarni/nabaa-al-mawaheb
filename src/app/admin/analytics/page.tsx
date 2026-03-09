@@ -1,9 +1,8 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
+import Link from 'next/link';
 import RiyalIcon from '@/components/RiyalIcon';
 
-const prisma = new PrismaClient();
-
-export default async function Analytics() {
+export default async function AdminAnalytics() {
     const allBookings = await prisma.booking.findMany({
         where: { status: 'ACCEPTED' },
         include: { stadium: true, user: true }

@@ -1,10 +1,9 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Wizard from './Wizard';
 
-const prisma = new PrismaClient();
-
-export default async function BookingPage({
+export default async function BookStadium({
     params
 }: {
     params: Promise<{ id: string }>
@@ -26,6 +25,7 @@ export default async function BookingPage({
             imageUrl: '',
             pricePerHour: id === 'mock-1' ? 150 : 200,
             capacity: id === 'mock-1' ? 10 : 12,
+            category: 'FOOTBALL',
             isActive: true,
             createdAt: new Date(),
             updatedAt: new Date()

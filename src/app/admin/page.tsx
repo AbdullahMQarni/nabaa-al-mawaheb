@@ -1,11 +1,7 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import Link from 'next/link';
+import { NextResponse } from 'next/server';
 import RiyalIcon from '@/components/RiyalIcon';
-
-// Instantiate Prisma
-const globalForPrisma = global as unknown as { prisma: PrismaClient };
-const prisma = globalForPrisma.prisma || new PrismaClient();
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 
 export default async function AdminDashboard() {
     const today = new Date();
@@ -177,7 +173,7 @@ export default async function AdminDashboard() {
                         {formatCurrency(operatingCosts)} <span style={{ fontSize: '0.6em', color: '#64748b' }}><RiyalIcon width={32} height={32} /></span>
                     </div>
                     <div style={{ width: '100%', height: '6px', backgroundColor: '#e2e8f0', borderRadius: '3px', marginBottom: '12px' }}>
-                        <div style={{ width: `${Math.min(Number(costPercentage), 100)}%`, height: '100%', backgroundColor: '#1a247f', borderRadius: '3px' }}></div>
+                        <div style={{ width: `${Math.min(Number(costPercentage), 100)}% `, height: '100%', backgroundColor: '#1a247f', borderRadius: '3px' }}></div>
                     </div>
                     <div style={{ fontSize: '0.75rem', color: '#64748b' }}>{costPercentage}% of total revenue allocated to costs</div>
                 </div>

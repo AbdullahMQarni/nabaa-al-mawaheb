@@ -1,9 +1,8 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import Link from 'next/link';
+import Image from 'next/image';
 import RiyalIcon from '@/components/RiyalIcon';
 import SearchAndFilter from '@/components/SearchAndFilter';
-
-const prisma = new PrismaClient();
 
 export default async function Home({
     searchParams

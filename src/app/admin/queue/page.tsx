@@ -1,7 +1,6 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
+import Link from 'next/link';
 import QueueClient from './QueueClient';
-
-const prisma = new PrismaClient();
 
 export default async function AdminQueue({
     searchParams

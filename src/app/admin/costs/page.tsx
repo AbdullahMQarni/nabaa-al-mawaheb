@@ -1,8 +1,6 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '@/lib/prisma';
 import CostFormClient from './CostFormClient';
 import RiyalIcon from '@/components/RiyalIcon';
-
-const prisma = new PrismaClient();
 
 export default async function CostsPage() {
     const stadiums = await prisma.stadium.findMany({ select: { id: true, name: true } });

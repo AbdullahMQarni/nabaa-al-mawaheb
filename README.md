@@ -75,3 +75,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - `npm run start`: Starts the production server.
 - `npm run lint`: Runs ESLint for code quality checks.
 
+## 🚀 Deployment
+
+### GitHub Import
+1. Push your code to a GitHub repository.
+2. Ensure `.env` is NOT committed (it's in `.gitignore`).
+
+### Vercel Setup
+1. Standard Next.js deployment: Import the project from GitHub.
+2. **Environment Variables**: Add `DATABASE_URL` in Vercel project settings.
+3. **Database Recommendation**: Vercel does not support persistent SQLite. For production, switch `provider = "sqlite"` to `"postgresql"` in `prisma/schema.prisma` and use a managed database like Vercel Postgres or Neon.
+4. **Build Optimization**: The `postinstall` script automatically generates the Prisma Client on every deployment.
+

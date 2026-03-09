@@ -1,11 +1,9 @@
-import { PrismaClient } from '@prisma/client';
 import { cookies } from 'next/headers';
+import { prisma } from '@/lib/prisma';
 import Link from 'next/link';
 import BookingCard from './BookingCard';
 
-const prisma = new PrismaClient();
-
-export default async function Dashboard() {
+export default async function DashboardPage() {
     const cookieStore = await cookies();
     const userId = cookieStore.get('session_userId')?.value;
 
