@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { prisma } from '@/lib/prisma';
 import CostFormClient from './CostFormClient';
 import RiyalIcon from '@/components/RiyalIcon';
