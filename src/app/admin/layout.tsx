@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import "./admin.css";
 import AdminSearch from "@/components/AdminSearch";
@@ -5,8 +6,9 @@ import AdminSearch from "@/components/AdminSearch";
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
     return (
         <div className="admin-layout" dir="ltr"> {/* Forcing LTR for admin based on mockup screenshot */}
-            {/* Sidebar */}
+            {/* ... sidebar ... */}
             <aside className="admin-sidebar">
+                {/* ... brand ... */}
                 <div className="admin-brand">
                     <div className="brand-icon">
                         <span style={{ color: 'white', fontWeight: 'bold' }}>🛡️</span>
@@ -49,7 +51,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <div className="admin-main-wrapper">
                 {/* Topbar */}
                 <header className="admin-topbar">
-                    <AdminSearch />
+                    <Suspense fallback={<div className="search-bar">Loading search...</div>}>
+                        <AdminSearch />
+                    </Suspense>
                     <div className="topbar-actions">
                         <button className="icon-btn">🔔</button>
                         <button className="icon-btn">⚙️</button>

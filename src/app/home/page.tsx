@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { prisma } from '@/lib/prisma';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -93,7 +94,9 @@ export default async function Home({
             </header>
 
             {/* Sub-header / Search & Categories Component */}
-            <SearchAndFilter />
+            <Suspense fallback={<div style={{ padding: '24px', textAlign: 'center' }}>Loading filters...</div>}>
+                <SearchAndFilter />
+            </Suspense>
 
             {/* Main Content */}
             <main style={{ flex: 1, padding: '24px', paddingBottom: '100px' }}>
