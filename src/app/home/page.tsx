@@ -13,6 +13,7 @@ export default async function Home({
     const { search, category } = await searchParams;
 
     const allStadiums = await prisma.stadium.findMany({
+        where: { isActive: true },
         orderBy: { createdAt: 'desc' }
     });
 

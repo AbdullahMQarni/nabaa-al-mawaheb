@@ -16,7 +16,7 @@ The project provides a comprehensive solution for stadium management, featuring 
 
 - **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Database**: [Prisma](https://www.prisma.io/) with SQLite
+- **Database**: [Prisma](https://www.prisma.io/) with PostgreSQL
 - **Styling**: Vanilla CSS with modern design patterns (Glassmorphism, CSS Variables)
 - **Fonts**: IBM Plex Sans Arabic (Primary)
 
@@ -84,6 +84,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Vercel Setup
 1. Standard Next.js deployment: Import the project from GitHub.
 2. **Environment Variables**: Add `DATABASE_URL` in Vercel project settings.
-3. **Database Recommendation**: Vercel does not support persistent SQLite. For production, switch `provider = "sqlite"` to `"postgresql"` in `prisma/schema.prisma` and use a managed database like Vercel Postgres or Neon.
+3. **Database**: PostgreSQL is required. Add your `DATABASE_URL` (e.g., Vercel Postgres, Neon, or Supabase) to Vercel environment variables.
 4. **Build Optimization**: The `postinstall` script automatically generates the Prisma Client on every deployment.
 

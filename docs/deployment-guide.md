@@ -26,13 +26,13 @@
 
 Open `prisma/schema.prisma` and change:
 
-```diff
- datasource db {
--  provider = "sqlite"
--  url      = "file:./dev.db"
-+  provider = "postgresql"
-+  url      = env("DATABASE_URL")
- }
+Verify `prisma/schema.prisma` uses PostgreSQL:
+
+```prisma
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
 ```
 
 Create/update `.env` in the project root:

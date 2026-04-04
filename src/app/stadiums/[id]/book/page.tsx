@@ -34,6 +34,10 @@ export default async function BookStadium({
         notFound();
     }
 
+    if (!stadium.isActive) {
+        notFound();
+    }
+
     return (
         <div style={{ backgroundColor: '#f6f6f8', minHeight: '100vh', direction: 'ltr' }}>
             <Wizard stadium={stadium} />
